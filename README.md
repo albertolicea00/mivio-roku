@@ -7,13 +7,14 @@
 
 ---
 
-## 🎨 Platform-Specific Experience Goals
+## 🎨 Platform Features & Limitations
 
-Mivio Roku embraces Roku's specific UI conventions while pushing the boundaries of SceneGraph capabilities:
+Mivio Roku embraces Roku's specific UI conventions while pushing the boundaries of SceneGraph capabilities, keeping the scope extremely focused:
 
-- **Roku SceneGraph (RSG)**: Optimized rendering of high-quality posters and backdrops.
-- **D-Pad Navigation**: Intuitive grid structures (RowList and MarkupGrid) that are fluid and performant even on lower-end Roku sticks.
-- **Native Video Node**: Hardware-accelerated playback of high-bitrate media.
+- ❌ **No USB / Local Storage**: Roku's limitations prevent reading local media efficiently.
+- ✅ **Home Server Client**: Functions exclusively as a streaming client for your home servers (Plex, Jellyfin).
+- ✅ **Native Roku Player**: Utilizes the native BrightScript Video node for hardware-accelerated, yet somewhat limited, media playback.
+- ❌ **No Local Multi-Account**: Profiles and watch states are strictly managed by your home server.
 
 ---
 
