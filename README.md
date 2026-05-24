@@ -1,6 +1,6 @@
 # 🍿 Mivio for Roku
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![License: Non-Commercial](https://img.shields.io/badge/License-Non_Commercial-red.svg?style=flat-square)](LICENSE)
 [![Platform Compatibility](https://img.shields.io/badge/Platforms-RokuOS-brightgreen.svg?style=flat-square)](#platform-specific-goals)
 
 **Mivio** is a premium, high-performance media management and playback application explicitly designed for Roku devices. Built natively using **BrightScript** and **Roku SceneGraph (RSG)**, Mivio delivers an elegant, fast, and deeply integrated media streaming experience for Roku TVs and streaming sticks.
@@ -60,4 +60,4 @@ For vulnerability reporting or security-related matters, see [SECURITY.md](SECUR
 ---
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Mivio Source-Available End User License Agreement (EULA)**. Commercial use, monetization, and unauthorized redistribution are strictly prohibited. See the [LICENSE](LICENSE) file for details.
