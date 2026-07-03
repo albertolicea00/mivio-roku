@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PlexTask: Plex media-server client (STUB).
+  Exposes the exact same interface as JellyfinTask so MainScene can swap it
+  in based on the configured serverType. See JellyfinTask.xml for the
+  interface contract.
+
+  TODO: implement the Plex API (PIN sign-in, /library/sections, /library/
+  metadata, transcode decision, /:/timeline progress reporting).
+-->
+<component name="PlexTask" extends="Task">
+  <interface>
+    <field id="serverUrl" type="string" />
+    <field id="token" type="string" />
+    <field id="userId" type="string" />
+    <field id="deviceId" type="string" />
+    <field id="input" type="assocarray" alwaysNotify="true" />
+    <field id="output" type="assocarray" alwaysNotify="true" />
+    <field id="ready" type="boolean" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/tasks/PlexTask.brs" />
+</component>

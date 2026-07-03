@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  JellyfinTask: Jellyfin media-server client running off the render thread.
+
+  Generic media-server task interface (any server task must expose these
+  fields so MainScene can swap implementations, e.g. PlexTask):
+    serverUrl / token / userId / deviceId  - connection state (inputs)
+    input   - request  { command: string, params: assocarray }
+    output  - response { command, params, success, data, error }
+    ready   - true once the task thread is listening for requests
+-->
+<component name="JellyfinTask" extends="Task">
+  <interface>
+    <field id="serverUrl" type="string" />
+    <field id="token" type="string" />
+    <field id="userId" type="string" />
+    <field id="deviceId" type="string" />
+    <field id="input" type="assocarray" alwaysNotify="true" />
+    <field id="output" type="assocarray" alwaysNotify="true" />
+    <field id="ready" type="boolean" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/tasks/JellyfinTask.brs" />
+  <script type="text/brightscript" uri="pkg:/source/utils/Json.brs" />
+</component>
