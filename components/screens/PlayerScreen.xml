@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PlayerScreen: native Video node playback.
+  Fetches playback info through the media-server task, plays the stream and
+  reports progress back to the server (start / progress / stopped).
+  Emits "playbackFinished" when playback ends (observed by MainScene).
+  MainScene sets "wasClosed" right before popping this screen so playback
+  can be stopped and reported cleanly.
+-->
+<component name="PlayerScreen" extends="Group">
+  <interface>
+    <field id="serverTask" type="node" />
+    <field id="item" type="assocarray" onChange="onItemChanged" />
+    <field id="playbackFinished" type="boolean" alwaysNotify="true" />
+    <field id="wasClosed" type="boolean" onChange="onClosed" />
+  </interface>
+  <children>
+    <Video id="video" width="1920" height="1080" />
+    <Label id="statusLabel" text="" translation="[360, 510]" width="1200" horizAlign="center" color="0xF5F5F5FF">
+      <Font role="font" size="30" />
+    </Label>
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/screens/PlayerScreen.brs" />
+</component>

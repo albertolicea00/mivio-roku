@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HomeScreen: library rows (one RowList row per server library view).
+  Emits "selectedItem" with the item metadata when a poster is selected.
+-->
+<component name="HomeScreen" extends="Group">
+  <interface>
+    <field id="serverTask" type="node" onChange="onServerTaskChanged" />
+    <field id="selectedItem" type="assocarray" alwaysNotify="true" />
+  </interface>
+  <children>
+    <Label id="titleLabel" text="Mivio" translation="[90, 40]" color="0xF5F5F5FF">
+      <Font role="font" size="44" />
+    </Label>
+    <Label id="statusLabel" text="" translation="[90, 118]" width="1740" color="0x9E9E9EFF">
+      <Font role="font" size="26" />
+    </Label>
+    <RowList
+      id="rowList"
+      translation="[90, 170]"
+      itemComponentName="PosterItem"
+      numRows="2"
+      itemSize="[1740, 400]"
+      itemSpacing="[0, 24]"
+      rowItemSize="[[190, 330]]"
+      rowItemSpacing="[[22, 0]]"
+      rowLabelOffset="[[0, 14]]"
+      showRowLabel="[true]"
+      rowFocusAnimationStyle="fixedFocusWrap" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/screens/HomeScreen.brs" />
+</component>

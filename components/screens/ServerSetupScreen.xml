@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ServerSetupScreen: first-run flow. Collects server URL + credentials via
+  keyboard dialogs and signs in through the media-server task.
+  Emits "credentials" on success (observed by MainScene).
+-->
+<component name="ServerSetupScreen" extends="Group">
+  <interface>
+    <field id="serverTask" type="node" />
+    <field id="credentials" type="assocarray" alwaysNotify="true" />
+  </interface>
+  <children>
+    <Label id="titleLabel" text="Welcome to Mivio" translation="[360, 150]" width="1200" horizAlign="center" color="0xF5F5F5FF">
+      <Font role="font" size="52" />
+    </Label>
+    <Label id="subtitleLabel" text="Connect to your Jellyfin server" translation="[360, 230]" width="1200" horizAlign="center" color="0x9E9E9EFF">
+      <Font role="font" size="28" />
+    </Label>
+    <ButtonGroup id="menu" translation="[610, 340]" itemSpacings="[16]">
+      <Button id="serverButton" text="Server URL: (not set)" minWidth="700" />
+      <Button id="userButton" text="Username: (not set)" minWidth="700" />
+      <Button id="passwordButton" text="Password: (not set)" minWidth="700" />
+      <Button id="connectButton" text="Connect" minWidth="700" />
+    </ButtonGroup>
+    <Label id="statusLabel" text="" translation="[360, 760]" width="1200" horizAlign="center" color="0xE0A030FF">
+      <Font role="font" size="26" />
+    </Label>
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/screens/ServerSetupScreen.brs" />
+</component>

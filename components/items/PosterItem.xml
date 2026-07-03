@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PosterItem: RowList item renderer (poster + title + focus ring). -->
+<component name="PosterItem" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="onContentChanged" />
+    <field id="focusPercent" type="float" onChange="onFocusChanged" />
+  </interface>
+  <children>
+    <Rectangle id="focusRing" width="198" height="293" translation="[-4, -4]" color="0xF97316FF" visible="false" />
+    <Rectangle id="posterBack" width="190" height="285" color="0x1E1E1EFF" />
+    <Poster id="poster" width="190" height="285" loadDisplayMode="scaleToZoom" />
+    <Label id="titleLabel" width="190" translation="[0, 293]" horizAlign="center" color="0xCCCCCCFF">
+      <Font role="font" size="20" />
+    </Label>
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/items/PosterItem.brs" />
+</component>

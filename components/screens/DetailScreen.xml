@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DetailScreen: media info (poster, title, runtime, overview) + Play button.
+  Emits "playRequested" with the item metadata (observed by MainScene).
+-->
+<component name="DetailScreen" extends="Group">
+  <interface>
+    <field id="serverTask" type="node" />
+    <field id="item" type="assocarray" onChange="onItemChanged" />
+    <field id="playRequested" type="assocarray" alwaysNotify="true" />
+  </interface>
+  <children>
+    <Poster id="poster" translation="[120, 160]" width="400" height="600" loadDisplayMode="scaleToZoom" />
+    <Label id="titleLabel" translation="[600, 170]" width="1200" color="0xF5F5F5FF">
+      <Font role="font" size="48" />
+    </Label>
+    <Label id="metaLabel" translation="[600, 250]" width="1200" color="0x9E9E9EFF">
+      <Font role="font" size="26" />
+    </Label>
+    <Label id="overviewLabel" translation="[600, 310]" width="1160" height="330" wrap="true" color="0xCCCCCCFF">
+      <Font role="font" size="27" />
+    </Label>
+    <Button id="playButton" text="Play" translation="[600, 680]" minWidth="300" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/screens/DetailScreen.brs" />
+</component>
