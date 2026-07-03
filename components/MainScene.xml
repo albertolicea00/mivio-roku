@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MainScene: root scene. Owns the screen stack and the media-server task. -->
+<component name="MainScene" extends="Scene">
+  <children>
+    <Rectangle id="background" width="1920" height="1080" color="0x151515FF" />
+    <Group id="screenStack" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+  <script type="text/brightscript" uri="pkg:/source/utils/Config.brs" />
+</component>
